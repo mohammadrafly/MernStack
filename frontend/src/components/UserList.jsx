@@ -33,8 +33,10 @@ const UserList = () => {
           <thead>
             <tr>
               <th>No</th>
+              <th>UID</th>
               <th>Name</th>
               <th>Email</th>
+              <th>Password</th>
               <th>Gender</th>
               <th>Actions</th>
             </tr>
@@ -43,8 +45,10 @@ const UserList = () => {
             {users.map((user, index) => (
               <tr key={user._id}>
                 <td>{index + 1}</td>
+                <td>{user._id}</td>
                 <td>{user.name}</td>
                 <td>{user.email}</td>
+                <td>{user.password}</td>
                 <td>{user.gender}</td>
                 <td>
                   <Link
